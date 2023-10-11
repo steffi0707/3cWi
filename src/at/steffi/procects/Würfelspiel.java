@@ -19,19 +19,19 @@ public class Würfelspiel {
             for (roundCounter = 1; roundCounter <= 6; roundCounter++) {
                 randomNumber1 = random.nextInt(1, 6);
                 randomNumber2 = random.nextInt(1, 6);
-                showRoundDialogs();
+                /*showRoundDialogs();*/
                 calculateWinnerOfRound();
                 pressEnterForNextRound();
 
             }
 
-            /*showWinnerOfGame();
+            showWinnerOfGame();
             boolean result = showFinishDialog();
             if (!result) {
                 roundCounter = 0;
             } else {
                 break;
-            }*/
+            }
         }
     }
     public static void showMenu() {
@@ -61,7 +61,6 @@ public class Würfelspiel {
     }
 
     public static void pressEnterForNextRound(){
-        public static void pressEnterForNextRound() {
             if (roundCounter == 1) {
 
 
@@ -102,8 +101,7 @@ public class Würfelspiel {
     }
 
 
-}
 
 
-    }
-}
+
+
