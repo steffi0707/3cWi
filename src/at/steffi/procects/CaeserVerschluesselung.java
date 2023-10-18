@@ -1,9 +1,9 @@
 package at.steffi.procects;
 
-public class CaeserVerschlüsselung {
+public class CaeserVerschluesselung {
     public static void main(String[] args) {
         String[] alphabet = {" ", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g","h","i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s","t", "u", "v", "w", "x", "y", "z"};
-        String word = "Spiel verloren";
+        String word = "Lost the game";
         System.out.println("Start sentence: " + word);
         String encrypted_word = encrypt(word, alphabet, 2);
         System.out.println("Encrypted sentence: " + encrypted_word);
@@ -15,9 +15,9 @@ public class CaeserVerschlüsselung {
         String[] string_list = string.split("");
         StringBuilder output = new StringBuilder();
         for (String character : string_list) {
-            for (int j = 0; j < cipher.length; j++) {
-                if (character.equals(cipher[j])) {
-                    output.append(cipher[(j + offset) % cipher.length]);
+            for (int i = 0; i < cipher.length; i++) {
+                if (character.equals(cipher[i])) {
+                    output.append(cipher[(i + offset) % cipher.length]);
                 }
             }
 
@@ -30,9 +30,9 @@ public class CaeserVerschlüsselung {
         String[] string_list = string.split("");
         StringBuilder output = new StringBuilder();
         for (String character : string_list)
-            for (int j = 0; j < cipher.length; j++) {
-                if (character.equals(cipher[j])) {
-                    int new_index = j - offset;
+            for (int i = 0; i < cipher.length; i++) {
+                if (character.equals(cipher[i])) {
+                    int new_index = i - offset;
                     while (new_index < 0) {
                         new_index += cipher.length;
                     }
