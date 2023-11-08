@@ -8,9 +8,15 @@ public class TicTacToe {
     static boolean isPlayer1 = true;
 
     public static void main(String[] args) {
+        showMenu();
         run();
     }
-
+    public static void showMenu() {
+        System.out.println("Please write 'Start' to start the game");
+        if (scanner.next().equalsIgnoreCase("Start")) {
+            boolean isGameOnAndStarted = true;
+        }
+    }
     public static void run(){
         Scanner scanner = new Scanner(System.in);
         int[][] board = new int[3][3];
@@ -18,7 +24,7 @@ public class TicTacToe {
 
         int player = 2;
 
-        printBoard(board);
+        printPlayBoard(board);
 
 
         while (game_is_running) {
@@ -31,20 +37,20 @@ public class TicTacToe {
             int[] position = getPosition(scanner);
             while (!checkPositionIsFree(board, position)) {
                 System.out.println("Position is already taken");
-                System.out.println("New position: ");
+                System.out.println("Please choose a new position: ");
                 position = getPosition(scanner);
             }
             updateBoard(board, position, player);
-            printBoard(board);
-            if (checkBoardForWinner(board, player)) {
-                System.out.println("Player" + player + " is the winner!");
+            printPlayBoard(board);
+            if (checkWinner(board, player)) {
+                System.out.println("Player " + player + " is the winner! Congratulation!!");
                 game_is_running = false;
             }
         }
 
     }
 
-    public static void printBoard(int[][] board) {
+    public static void printPlayBoard(int[][] board) {
         for (int[] row : board) {
             for (int state : row) {
                 if (state == 1) {
@@ -78,32 +84,28 @@ public class TicTacToe {
         return board[position[0]][position[1]] == 0;
     }
 
-    public static boolean checkBoardForWinner(int[][] board, int player) {
-        boolean winner = board[0][0] == player && board[0][1] == player && board[0][2] == player;
+    public static boolean checkWinner(int[][] place, int player) {
+        boolean winner = place[0][0] == player && place[0][1] == player && place[0][2] == player;
 
-        if (board[1][0] == player && board[1][1] == player && board[1][2] == player) {
+        if (place[1][0] == player && place[1][1] == player && place[1][2] == player) {
             winner = true;
         }
-        if (board[2][0] == player && board[2][1] == player && board[2][2] == player) {
+        if (place[2][0] == player && place[2][1] == player && place[2][2] == player) {
             winner = true;
         }
-
-
-        if (board[0][0] == player && board[1][0] == player && board[2][0] == player) {
+        if (place[0][0] == player && place[1][0] == player && place[2][0] == player) {
             winner = true;
         }
-        if (board[0][1] == player && board[1][1] == player && board[2][1] == player) {
+        if (place[0][1] == player && place[1][1] == player && place[2][1] == player) {
             winner = true;
         }
-        if (board[0][2] == player && board[1][2] == player && board[2][2] == player) {
+        if (place[0][2] == player && place[1][2] == player && place[2][2] == player) {
             winner = true;
         }
-
-
-        if (board[0][0] == player && board[1][1] == player && board[2][2] == player) {
+        if (place[0][0] == player && place[1][1] == player && place[2][2] == player) {
             winner = true;
         }
-        if (board[0][2] == player && board[1][1] == player && board[2][0] == player) {
+        if (place[0][2] == player && place[1][1] == player && place[2][0] == player) {
             winner = true;
         }
 

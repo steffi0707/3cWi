@@ -3,7 +3,7 @@ package at.steffi.procects;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Würfelspiel {
+public class Wuerfelspiel {
     static Scanner scanner = new Scanner(System.in);
     static Random random = new Random();
     static boolean isGameOnAndStarted = false;
