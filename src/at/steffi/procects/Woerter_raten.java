@@ -1,6 +1,5 @@
 package at.steffi.procects;
 
-import java.sql.SQLOutput;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -8,7 +7,7 @@ public class Woerter_raten {
     public static void main(String[] args) {
         Random randomNumberGenerator = new Random();
         boolean GameRunning = true;
-        String[] words = {"Sarah", "Eduard", "Maurice", "Alfredo", "Elina", "Fabian"};
+        String[] words = {"Sarah", "Eduard", "Maurice", "Alfredo", "Bernd", "Fabian"};
         Scanner scanner = new Scanner(System.in);
 
         while (GameRunning) {
