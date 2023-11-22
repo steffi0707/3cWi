@@ -2,15 +2,28 @@ package at.steffi.Car;
 
 public class Auto_start {
     public static void main(String[] args) {
-        int car1FuelConsumption = 7;
-        String car1Brand = "Audi";
-        String car1SerialNumber = "A1234";
+        Car c1  = new Car();
+        c1.brand = "Audi";
+        c1.fuelConsumption = 7;
+        c1.serialNumber = "A1234";
+        c1.fuelAmount = 70;
 
-        int car2FuelConsumption = 5;
-        String car2Brand = "Audi";
-        String car2SerialNum = "A1235";
+        Car c2 = new Car();
+        c2.brand = "Mercedes";
+        c2.fuelConsumption = 6;
+        c2.serialNumber = "M1234";
+        c2.fuelAmount = 20;
 
-        String[] cars = {"7;Audi;A1234","5;Audi;A1235"};
-        String[] car1 = cars[0].split(";");
+        System.out.println(c2.fuelAmount);
+        c2.drive();
+        System.out.println(c2.fuelAmount);
+
+        System.out.println(c1.serialNumber);
+        System.out.println(c2.serialNumber);
+
+        c1.Break();
+        c1.turboBoost();
+
+        c2.honk();
     }
 }
