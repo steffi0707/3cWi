@@ -6,9 +6,21 @@ public class Car {
     // dont do that later
     public int fuelConsumption;
     public int fuelAmount;
+    public int amountOfRepetitions;
+    public int getRemainingRange;
     public String brand;
     public String serialNumber;
     private String color;
+    double RemainingRange;
+
+
+    public Car(int fuelConsumption, String brand, String serialNumber, int fuelAmount, int amountOfRepetitions){
+        this.fuelConsumption = fuelConsumption;
+        this.brand = brand;
+        this.serialNumber = serialNumber;
+        this.fuelAmount = fuelAmount;
+        this.amountOfRepetitions = amountOfRepetitions;
+    }
 
 
     public void drive(){
@@ -29,7 +41,14 @@ public class Car {
         }
     }
 
-    public void honk(){
-        System.out.println("Tuuuuut");
+    public void honk(int amountOfRepetitions){
+       for (int counter = 0; counter < amountOfRepetitions; counter ++) {
+           System.out.println("Tuuuuut");
+       }
+    }
+
+    public void getRemainingRange() {
+        RemainingRange = 100.0 / this.fuelConsumption * this.fuelAmount;
+        System.out.println(RemainingRange);
     }
 }
