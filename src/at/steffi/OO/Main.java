@@ -1,14 +1,14 @@
-package at.steffi.Car;
+package at.steffi.OO;
 
 public class Main {
     public static void main(String[] args) {
-        Car c1  = new Car(4, "Audi", "A1234", 7, 3);
+        Car c1  = new Car(4, "Audi", "A1234", 7, 3, "red");
 
 
-        Car c2 = new Car(12, "Mercedes", "M1234", 32, 5);
+        Car c2 = new Car(12, "Mercedes", "M1234", 32, 5, "green");
 
 
-        Car c3 = new Car(5, "Opel", "1234O", 17, 6);
+        Car c3 = new Car(5, "Opel", "1234O", 17, 6, "blue");
 
         System.out.println(c3.serialNumber);
 

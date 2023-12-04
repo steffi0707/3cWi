@@ -1,4 +1,4 @@
-package at.steffi.Car;
+package at.steffi.OO;
 
 public class Car {
     // Instanz / Gedächnisvariablen
@@ -10,16 +10,19 @@ public class Car {
     public int getRemainingRange;
     public String brand;
     public String serialNumber;
-    private String color;
+    public String color;
     double RemainingRange;
 
 
-    public Car(int fuelConsumption, String brand, String serialNumber, int fuelAmount, int amountOfRepetitions){
+
+
+    public Car(int fuelConsumption, String brand, String serialNumber, int fuelAmount, int amountOfRepetitions, String color){
         this.fuelConsumption = fuelConsumption;
         this.brand = brand;
         this.serialNumber = serialNumber;
         this.fuelAmount = fuelAmount;
         this.amountOfRepetitions = amountOfRepetitions;
+        this.color = color;
     }
 
 
@@ -50,5 +53,26 @@ public class Car {
     public void getRemainingRange() {
         RemainingRange = 100.0 / this.fuelConsumption * this.fuelAmount;
         System.out.println(RemainingRange);
+    }
+
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setFuelAmount(int fuelAmount) {
+        this.fuelAmount = fuelAmount;
+    }
+
+    public void setFuelConsumption(int fuelConsumption){
+        this.fuelConsumption = fuelConsumption;
+    }
+
+    public void setSerialNumber(String serialNumber){
+        this.serialNumber = serialNumber;
     }
 }
