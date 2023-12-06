@@ -4,6 +4,7 @@ public class Car {
     // Instanz / Gedächnisvariablen
 
     // dont do that later
+    private Engine engine;
     public int fuelConsumption;
     public int fuelAmount;
     public int amountOfRepetitions;
@@ -16,7 +17,8 @@ public class Car {
 
 
 
-    public Car(int fuelConsumption, String brand, String serialNumber, int fuelAmount, int amountOfRepetitions, String color){
+    public Car(Engine engine, int fuelConsumption, String brand, String serialNumber, int fuelAmount, int amountOfRepetitions, String color){
+        this.engine = engine;
         this.fuelConsumption = fuelConsumption;
         this.brand = brand;
         this.serialNumber = serialNumber;
@@ -75,4 +77,14 @@ public class Car {
     public void setSerialNumber(String serialNumber){
         this.serialNumber = serialNumber;
     }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
 }
+
+

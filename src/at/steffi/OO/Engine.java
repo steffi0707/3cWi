@@ -1,9 +1,14 @@
 package at.steffi.OO;
 
 public class Engine {
-    private enum TYPE {DIESEL, GAS}
+    public enum TYPE {DIESEL, GAS}
     private int horsePower;
-    private String type; //Diesel oder Benzin
+    private TYPE type; //Diesel oder Benzin
+
+    public Engine(int horsePower, TYPE type) {
+        this.horsePower = horsePower;
+        this.type = type;
+    }
 
     //amount schould be between 0 and 100
 
