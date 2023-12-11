@@ -34,7 +34,7 @@ public class Car {
     }
 
     public void Break(){
-        System.out.println("Ich bremse");
+        System.out.println("I'm putting the brakes on");
     }
 
     public void turboBoost(){
