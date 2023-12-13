@@ -15,9 +15,7 @@ public class Car {
     double RemainingRange;
 
 
-
-
-    public Car(Engine engine, int fuelConsumption, String brand, String serialNumber, int fuelAmount, int amountOfRepetitions, String color){
+    public Car(Engine engine, int fuelConsumption, String brand, String serialNumber, int fuelAmount, int amountOfRepetitions, String color) {
         this.engine = engine;
         this.fuelConsumption = fuelConsumption;
         this.brand = brand;
@@ -28,28 +26,27 @@ public class Car {
     }
 
 
-    public void drive(){
+    public void drive() {
         this.fuelAmount = this.fuelAmount - fuelConsumption;
         System.out.println("I am driving");
     }
 
-    public void Break(){
+    public void Break() {
         System.out.println("I'm putting the brakes on");
     }
 
-    public void turboBoost(){
-        if (this.fuelAmount >fuelAmount/10){
+    public void turboBoost() {
+        if (this.fuelAmount > fuelAmount / 10) {
             System.out.println("Not enough fuel to go to Superboost");
-        }
-        else{
+        } else {
             System.out.println("SuperBoostMode");
         }
     }
 
-    public void honk(int amountOfRepetitions){
-       for (int counter = 0; counter < amountOfRepetitions; counter ++) {
-           System.out.println("Tuuuuut");
-       }
+    public void honk(int amountOfRepetitions) {
+        for (int counter = 0; counter < amountOfRepetitions; counter++) {
+            System.out.println("Tuuuuut");
+        }
     }
 
     public void getRemainingRange() {
@@ -70,11 +67,11 @@ public class Car {
         this.fuelAmount = fuelAmount;
     }
 
-    public void setFuelConsumption(int fuelConsumption){
+    public void setFuelConsumption(int fuelConsumption) {
         this.fuelConsumption = fuelConsumption;
     }
 
-    public void setSerialNumber(String serialNumber){
+    public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
     }
 

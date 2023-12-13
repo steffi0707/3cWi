@@ -2,6 +2,7 @@ package at.steffi.OO;
 
 public class Engine {
     public enum TYPE {DIESEL, GAS}
+
     private int horsePower;
     private TYPE gastype; //Diesel oder Benzin
 
@@ -12,11 +13,11 @@ public class Engine {
 
     //amount should be between 0 and 100
 
-    public void drive(int amount){
+    public void drive(int amount) {
         System.out.println("The motor is running with" + amount);
     }
 
-    public int getHorsePower(){
+    public int getHorsePower() {
         return horsePower;
     }
 

@@ -7,9 +7,9 @@ public class Main {
         Engine e2 = new Engine(250, Engine.TYPE.GAS);
         Engine e3 = new Engine(310, Engine.TYPE.DIESEL);
 
-        Car c1  = new Car(e1,4, "Audi", "A1234", 7, 3, "red");
-        Car c2 = new Car(e2,12, "Mercedes", "M1234", 32, 5, "green");
-        Car c3 = new Car(e3,5, "Opel", "O1234", 17, 6, "blue");
+        Car c1 = new Car(e1, 4, "Audi", "A1234", 7, 3, "red");
+        Car c2 = new Car(e2, 12, "Mercedes", "M1234", 32, 5, "green");
+        Car c3 = new Car(e3, 5, "Opel", "O1234", 17, 6, "blue");
 
         //Car 1
         System.out.println(c1.serialNumber);
@@ -22,15 +22,11 @@ public class Main {
         c2.drive();
         System.out.println(c2.fuelAmount);
         System.out.println(c2.serialNumber);
+        c2.getRemainingRange();
 
         //Car 3
         System.out.println(c3.serialNumber);
 
-
-
-
-
-        c2.getRemainingRange();
 
     }
 }
