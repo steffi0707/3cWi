@@ -1,10 +1,14 @@
 package at.steffi.OO;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Car {
     // Instanz / Gedächnisvariablen
 
     // dont do that later
     private Engine engine;
+    private List<RearMirror> mirrors;
     public int fuelConsumption;
     public int fuelAmount;
     public int amountOfRepetitions;
@@ -23,8 +27,17 @@ public class Car {
         this.fuelAmount = fuelAmount;
         this.amountOfRepetitions = amountOfRepetitions;
         this.color = color;
+        this.mirrors = new ArrayList<>();
     }
 
+
+    public void addMirror(RearMirror rearMirror){
+        this.mirrors.add(rearMirror);
+    }
+
+    public List<RearMirror> getMirrors() {
+        return mirrors;
+    }
 
     public void drive(int speed) {
         this.fuelAmount = this.fuelAmount - fuelConsumption;
