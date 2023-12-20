@@ -2,13 +2,13 @@ package at.steffi.OO;
 
 public class Tank {
     private double capacity;
-    private double fuelConsumption;
+    private double fuelAmount;
     private String material;
     private double fuelUsed;
 
-    public Tank(double capacity, double fuelConsumption, String material) {
+    public Tank(double capacity, double fuelAmount, String material) {
         this.capacity = capacity;
-        this.fuelConsumption = fuelConsumption;
+        this.fuelAmount = fuelAmount;
         this.material = material;
         this.fuelUsed = 30;
     }
@@ -21,12 +21,12 @@ public class Tank {
         this.capacity = capacity;
     }
 
-    public double getFuelConsumption() {
-        return fuelConsumption;
+    public double getFuelAmount() {
+        return fuelAmount;
     }
 
-    public void setFuelConsumption(double fuelConsumption) {
-        this.fuelConsumption = fuelConsumption;
+    public void setFuelAmount(double fuelAmount) {
+        this.fuelAmount = fuelAmount;
     }
 
     public String getMaterial() {

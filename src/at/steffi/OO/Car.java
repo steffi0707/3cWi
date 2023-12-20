@@ -8,9 +8,10 @@ public class Car {
 
     // dont do that later
     private Engine engine;
+    private Tank tank;
     private List<RearMirror> mirrors;
     public int fuelConsumption;
-    public int fuelAmount;
+
     public int amountOfRepetitions;
     public int getRemainingRange;
     public String brand;
@@ -19,12 +20,13 @@ public class Car {
     double RemainingRange;
 
 
-    public Car(Engine engine, int fuelConsumption, String brand, String serialNumber, int fuelAmount, int amountOfRepetitions, String color) {
+    public Car(Engine engine, int fuelConsumption, String brand, String serialNumber, Tank tank, int amountOfRepetitions, String color) {
         this.engine = engine;
         this.fuelConsumption = fuelConsumption;
         this.brand = brand;
         this.serialNumber = serialNumber;
-        this.fuelAmount = fuelAmount;
+        this.tank = tank;
+
         this.amountOfRepetitions = amountOfRepetitions;
         this.color = color;
         this.mirrors = new ArrayList<>();
@@ -40,7 +42,8 @@ public class Car {
     }
 
     public void drive(int speed) {
-        this.fuelAmount = this.fuelAmount - fuelConsumption;
+        this.tank.setFuelAmount(this.tank.getFuelAmount()- fuelConsumption);
+
         System.out.println("I am driving");
         engine.drive(speed);
     }
@@ -50,7 +53,7 @@ public class Car {
     }
 
     public void turboBoost() {
-        if (this.fuelAmount > fuelAmount / 10) {
+        if (this.getTank().getFuelAmount() >  40) {
             System.out.println("Not enough fuel to go to Superboost");
         } else {
             System.out.println("SuperBoostMode");
@@ -64,7 +67,7 @@ public class Car {
     }
 
     public void getRemainingRange() {
-        RemainingRange = 100.0 / this.fuelConsumption * this.fuelAmount;
+        RemainingRange = 100.0 / this.fuelConsumption * this.getTank().getFuelAmount();
         System.out.println(RemainingRange);
     }
 
@@ -78,7 +81,7 @@ public class Car {
     }
 
     public void setFuelAmount(int fuelAmount) {
-        this.fuelAmount = fuelAmount;
+        this.getTank().setFuelAmount(fuelAmount);
     }
 
     public void setFuelConsumption(int fuelConsumption) {
@@ -98,6 +101,18 @@ public class Car {
     }
 
     public void drive() {
+    }
+
+    public Tank getTank() {
+        return tank;
+    }
+
+    public void setTank(Tank tank) {
+        this.tank = tank;
+    }
+
+    public void setMirrors(List<RearMirror> mirrors) {
+        this.mirrors = mirrors;
     }
 }
 

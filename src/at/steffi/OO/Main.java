@@ -7,12 +7,14 @@ public class Main {
         Engine e2 = new Engine(250, Engine.TYPE.GAS);
         Engine e3 = new Engine(310, Engine.TYPE.DIESEL);
 
+        Tank tank1 = new Tank(100,40,"alu");
+
         RearMirror r1 = new RearMirror(100, 0);
         RearMirror r2 = new RearMirror(90, -40);
 
-        Car c1 = new Car(e1, 4, "Audi", "A1234", 7, 3, "red");
-        Car c2 = new Car(e2, 12, "Mercedes", "M1234", 32, 5, "green");
-        Car c3 = new Car(e3, 5, "Opel", "O1234", 17, 6, "blue");
+        Car c1 = new Car(e1, 4, "Audi", "A1234", tank1, 3, "red");
+        Car c2 = new Car(e2, 12, "Mercedes", "M1234",  tank1, 4,"green");
+        Car c3 = new Car(e3, 5, "Opel", "O1234", tank1, 6, "blue");
 
         //Car 1
         System.out.println(c1.serialNumber);
@@ -25,7 +27,7 @@ public class Main {
         System.out.println(c1.getMirrors().get(0).getPosition());
 
         //Car 2
-        System.out.println(c2.fuelAmount);
+        System.out.println(c2.getTank().getFuelAmount());
         c2.drive();
         System.out.println(c2.serialNumber);
         c2.getRemainingRange();
