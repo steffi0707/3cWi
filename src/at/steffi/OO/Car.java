@@ -10,13 +10,14 @@ public class Car {
     private Engine engine;
     private Tank tank;
     private List<RearMirror> mirrors;
-    public int fuelConsumption;
+    private List<Wheel> wheels;
+    private int fuelConsumption;
 
-    public int amountOfRepetitions;
-    public int getRemainingRange;
-    public String brand;
-    public String serialNumber;
-    public String color;
+    private int amountOfRepetitions;
+    private int getRemainingRange;
+    private String brand;
+    private String serialNumber;
+    private String color;
     double RemainingRange;
 
 
@@ -30,6 +31,7 @@ public class Car {
         this.amountOfRepetitions = amountOfRepetitions;
         this.color = color;
         this.mirrors = new ArrayList<>();
+        this.wheels = new ArrayList<>();
     }
 
 
@@ -39,6 +41,14 @@ public class Car {
 
     public List<RearMirror> getMirrors() {
         return mirrors;
+    }
+
+    public void addWheel(Wheel wheel){
+        this.wheels.add(wheel);
+    }
+
+    public List<Wheel> getWheels() {
+        return wheels;
     }
 
     public void drive(int speed) {
@@ -71,6 +81,26 @@ public class Car {
         System.out.println(RemainingRange);
     }
 
+
+    public void setAmountOfRepetitions(int amountOfRepetitions) {
+        this.amountOfRepetitions = amountOfRepetitions;
+    }
+
+    public int getAmountOfRepetitions() {
+        return amountOfRepetitions;
+    }
+
+    public String getSerialNumber() {
+        return serialNumber;
+    }
+
+    public void setGetRemainingRange(int getRemainingRange) {
+        this.getRemainingRange = getRemainingRange;
+    }
+
+    public void setRemainingRange(double remainingRange) {
+        RemainingRange = remainingRange;
+    }
 
     public void setBrand(String brand) {
         this.brand = brand;
@@ -113,6 +143,10 @@ public class Car {
 
     public void setMirrors(List<RearMirror> mirrors) {
         this.mirrors = mirrors;
+    }
+
+    public void setWheels(List<Wheel> wheels){
+        this.wheels = wheels;
     }
 }
 
