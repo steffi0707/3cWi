@@ -6,7 +6,7 @@ import java.util.List;
 public class Car {
     // Instanz / Gedächnisvariablen
 
-    // dont do that later
+    // don't do that later
     private Engine engine;
     private Tank tank;
     private List<RearMirror> mirrors;
