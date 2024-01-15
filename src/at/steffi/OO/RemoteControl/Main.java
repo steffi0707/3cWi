@@ -15,7 +15,7 @@ public class Main {
         remoteControl.turnOn();
         System.out.println(remoteControl.getStatus());
         remoteControl.turnOff();
-        System.out.println(remoteControl.getStatus());
+ 
 
     }
 }

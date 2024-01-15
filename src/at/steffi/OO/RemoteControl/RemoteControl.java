@@ -6,11 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RemoteControl {
-   /* private int getStatus;
-    private int turnOn;
-    private int turnOff;*/
 
-    private List<Battery> batteries = new ArrayList<>();
+
+    private final List<Battery> batteries = new ArrayList<>();
     public void addBattery(Battery battery){
         this.batteries.add(battery);
 
