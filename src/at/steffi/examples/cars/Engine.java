@@ -12,7 +12,7 @@ public class Engine {
         this.gastype = gastype;
     }
 
-    public at.steffi.OO.Engine.TYPE getGastype() {
+    public TYPE getGastype() {
         return gastype;
     }
 }
