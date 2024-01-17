@@ -5,4 +5,14 @@ public class Engine {
     private int basisConsumption;
     public enum TYPE {DIESEL, GAS}
     private int Achievement;
+    private TYPE gastype; //Diesel oder Benzin
+
+    public Engine(int maxSpeed, TYPE gastype) {
+        this.maxSpeed = maxSpeed;
+        this.gastype = gastype;
+    }
+
+    public at.steffi.OO.Engine.TYPE getGastype() {
+        return gastype;
+    }
 }
