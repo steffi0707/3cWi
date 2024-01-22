@@ -7,12 +7,26 @@ public class Engine {
     private int Achievement;
     private TYPE gastype; //Diesel oder Benzin
 
-    public Engine(int maxSpeed, TYPE gastype) {
+    public Engine(int maxSpeed, TYPE gastype, int basisConsumption, int Achievement) {
         this.maxSpeed = maxSpeed;
         this.gastype = gastype;
+        this.basisConsumption = basisConsumption;
+        this.Achievement = Achievement;
     }
 
     public TYPE getGastype() {
         return gastype;
+    }
+
+    public int getMaxSpeed(){
+        return maxSpeed;
+    }
+
+    public int getBasisConsumption(){
+        return basisConsumption;
+    }
+
+    public int getAchievement(){
+        return Achievement;
     }
 }
