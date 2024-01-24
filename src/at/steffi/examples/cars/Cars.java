@@ -7,25 +7,26 @@ import java.util.List;
 
 public class Cars {
     private Engine engine;
-    private List<Manufacturer> manufacturer;
+    private Manufacturer manufacturer;
     private String color;
     private int basisPrize;
 
-    public Cars(Engine engine, String color, int basisPrize) {
+
+    public Cars(Engine engine, String color, int basisPrize, Manufacturer manufacturer) {
         this.engine = engine;
         this.color = color;
         this.basisPrize = basisPrize;
 
-        this.manufacturer = new ArrayList<>();
+        this.manufacturer = manufacturer;
 
     }
 
-    public void addManufacturer(Manufacturer manufacturer){
-        this.manufacturer.add(manufacturer);
-    }
 
-    public List<Manufacturer> getManufacturer() {
-        return manufacturer;
+
+    public void Prize(){
+        this.manufacturer.setDiscount(basisPrize- this.manufacturer.getDiscount());
+
+        System.out.println("The Prize is");
     }
 
     public Engine getEngine() {
@@ -36,9 +37,17 @@ public class Cars {
         this.engine = engine;
     }
 
-    public void setManufacturer(List<Manufacturer> manufacturer) {
-        this.manufacturer = manufacturer;
+
+
+    public Manufacturer getmanufacturer(){
+        return (Manufacturer) manufacturer;
     }
+
+    public void setManufacturer(List<Manufacturer> manufacturer) {
+        this.manufacturer = (Manufacturer) manufacturer;
+    }
+
+
 
     public int getBasisPrize() {
         return basisPrize;

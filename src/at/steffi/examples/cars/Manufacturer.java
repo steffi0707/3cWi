@@ -3,11 +3,11 @@ package at.steffi.examples.cars;
 public class Manufacturer {
     private String Name;
     private String CountryOfOrigin;
-    private String Discount;
+    private double Discount;
 
 
 
-    public Manufacturer (String Name, String CountryOfOrigin, String Discount) {
+    public Manufacturer (String Name, String CountryOfOrigin, double Discount) {
         this.Name = Name;
         this.CountryOfOrigin = CountryOfOrigin;
         this.Discount = Discount;
@@ -21,7 +21,11 @@ public class Manufacturer {
         return CountryOfOrigin;
     }
 
-    public String getDiscount(){
+    public double getDiscount(){
         return Discount;
+    }
+
+    public void setDiscount(double Discount) {
+        this.Discount = Discount;
     }
 }

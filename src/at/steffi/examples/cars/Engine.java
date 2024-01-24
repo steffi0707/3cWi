@@ -14,6 +14,10 @@ public class Engine {
         this.Achievement = Achievement;
     }
 
+    public void Consumption(){
+
+    }
+
     public TYPE getGastype() {
         return gastype;
     }
