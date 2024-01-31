@@ -10,24 +10,33 @@ public class Cars {
     private Manufacturer manufacturer;
     private String color;
     private int basisPrize;
+    private int distance;
+    private int price;
+
+    private int Consumption;
 
 
-    public Cars(Engine engine, String color, int basisPrize, Manufacturer manufacturer) {
+    public Cars(Engine engine, String color, int basisPrize, Manufacturer manufacturer, int distance) {
         this.engine = engine;
         this.color = color;
         this.basisPrize = basisPrize;
 
         this.manufacturer = manufacturer;
+        this.distance = distance;
+
+        this.price = (int) (this.basisPrize - (this.manufacturer.getDiscount() * this.basisPrize));
+
+        if (this.distance < 50000) {
+            this.Consumption = this.engine.getBasisConsumption();
+        } else {
+            this.Consumption = (int) (this.engine.getBasisConsumption() * 1.098);
+        }
 
     }
 
 
 
-    public void Prize(){
-        this.manufacturer.setDiscount(basisPrize- this.manufacturer.getDiscount());
 
-        System.out.println("The Prize is");
-    }
 
     public Engine getEngine() {
         return engine;

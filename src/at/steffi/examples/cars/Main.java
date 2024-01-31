@@ -9,7 +9,13 @@ public class Main {
         Manufacturer m1 = new Manufacturer("Rupert", "Austria", 17);
         Manufacturer m2 = new Manufacturer("Eugen", "Germany", 20);
 
-        Cars c1 = new Cars(e1, "Blue", 1500, m1);
-        Cars c2 = new Cars(e2, "Yellow", 2000, m2);
+        Cars c1 = new Cars(e1, "Blue", 1500, m1, 200);
+        Cars c2 = new Cars(e2, "Yellow", 2000, m2, 50001);
+
+        //Car 1
+        System.out.println(c1.getBasisPrize());
+        System.out.println(c1.getColor());
+        System.out.println(c1.getmanufacturer());
     }
+
 }
