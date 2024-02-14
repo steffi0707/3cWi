@@ -12,7 +12,7 @@ public class Main {
         System.out.println(sqrtCalculator.sqrt(123));
 
         System.out.println(scienceCalculator.divide(3, 5));
-        System.out.println(sqrtCalculator.divide(3, 5));
+        System.out.println(sqrtCalculator.divide(3, 5 ));
 
 
     }
