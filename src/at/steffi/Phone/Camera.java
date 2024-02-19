@@ -8,5 +8,9 @@ public class Camera {
         this.resolution = resolution;
     }
 
+    public PhoneFile makePicture(String extension, String name){
+        PhoneFile phoneFile = new PhoneFile(extension, resolution*resolution, name);
+        return phoneFile;
 
+    }
 }
