@@ -1,4 +1,4 @@
-package at.steffi.Phone;
+package at.steffi.Phone.parts;
 
 public class PhoneFile {
     String extension;

@@ -1,4 +1,4 @@
-package at.steffi.Phone;
+package at.steffi.Phone.parts;
 
 import java.util.ArrayList;
 import java.util.List;

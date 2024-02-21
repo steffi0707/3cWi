@@ -1,4 +1,4 @@
-package at.steffi.Phone;
+package at.steffi.Phone.parts;
 public class SIM {
     private String number;
     private int id;

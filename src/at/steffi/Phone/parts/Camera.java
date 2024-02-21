@@ -1,4 +1,6 @@
-package at.steffi.Phone;
+package at.steffi.Phone.parts;
+
+import at.steffi.Phone.parts.PhoneFile;
 
 public class Camera {
     private int resolution;
